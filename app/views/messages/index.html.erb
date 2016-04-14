@@ -18,6 +18,7 @@
 <% #部分テンプレートを読み込んでいる %>
 <%= render 'form' %>
 
+<<<<<<< HEAD
 <%= form_for(@message) do |f| %>
   <% if @message.errors.present? %>
     <div class="alert alert-danger">
@@ -38,4 +39,26 @@
   内容:
   <%= f.text_field :body %>
   <%= f.submit %>
+=======
+<%= form_for(@message, :html => {:class => "form-horizontale"}) do |f| %>
+  <div class="form-group">
+    <label for="message_name" class="col-sm-2 control-label">名前:</label>
+    <div class="col-sm-10">
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+</div>
+  
+  <div class="form-group">
+    <label for="message_body" class="col-sm-2 control-label">内容:</label>
+    <div class="col-sm-10">
+      <%= f.text_area :body, class: "form-control" %>
+  </div>
+</div>
+  
+<div class="form-group">
+  <div class="col-sm-offset-2 col-sm-10">
+    <%= f.submit class: "btn btn-primary btn-block form-control" %>
+  </div>
+</div>
+>>>>>>> challenge1
 <% end %>
