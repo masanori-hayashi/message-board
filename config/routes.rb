@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'messages#index'
   resources :messages , except: [:index, :new]
+  # get 'message' => 'messages#index'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -28,6 +30,8 @@ Rails.application.routes.draw do
   #       get 'sold'
   #     end
   #   end
+  # /products/1/short products#short
+  # /products/sold    products#sold
 
   # Example resource route with sub-resources:
   #   resources :products do

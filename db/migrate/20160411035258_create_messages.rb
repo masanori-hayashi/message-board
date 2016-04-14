@@ -5,6 +5,8 @@ class CreateMessages < ActiveRecord::Migration
       t.string :body
 
       t.timestamps null: false
+      # t.date :updated_at
+      # t.date :created_at
     end
   end
 end
