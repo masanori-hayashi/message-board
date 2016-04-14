@@ -45,4 +45,3 @@ end
     @message = Message.find(params[:id])
   end
 end
-
