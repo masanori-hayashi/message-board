@@ -4,10 +4,9 @@ class MessagesController < ApplicationController
     @message = Message.new
     # Messageを全て取得する。
     @messages = Message.all
-    def edit
   end
-end
-  
+  def edit
+  end
   
   def update
     if @message.update(message_params)
@@ -45,3 +44,4 @@ end
     @message = Message.find(params[:id])
   end
 end
+
