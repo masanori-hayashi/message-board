@@ -5,12 +5,9 @@ class MessagesController < ApplicationController
     # Messageを全て取得する。
     @messages = Message.all
   end
+
   def edit
   end
-  
-
-    def edit
-    end
   
   def update
     if @message.update(message_params)
@@ -40,12 +37,10 @@ class MessagesController < ApplicationController
   end
   
   private
+
   def message_params
-    params.require(:message).permit(:name, :body)
+    params.require(:message).permit(:name, :body, :age)
   end
-    def set_message
-    @message = Message.find(params[:id])
-    end
   ## ここまで
   def set_message
     @message = Message.find(params[:id])
